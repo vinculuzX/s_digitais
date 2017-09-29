@@ -1,14 +1,18 @@
 import React from 'react'
 
-export class FlexHeader extends React.Component{
-
-  contructor(){
-
-  }
+export default class FlexHeader extends React.Component{
   render(){
-    return header
+    return (
+      <header Classname={header}>
+        <div Classname={header__brand}>
+          <img src=""/>
+        </div>
+        <div Classname={header__title}>
+          <h4>Equipe de soluções digitais</h4>
+        </div>  
+      </header>
+    )
   }
 }
 
-const Header  = FlexHeader
-export defaulf Header
+

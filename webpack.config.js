@@ -1,5 +1,6 @@
 var path = require('path')
-
+// const APP_SRC = path.join(__dirname,'src')
+// const APP_BUILD = path.join(__dirname,'build')
 module.exports = {
 	entry:'./src/index.jsx',
 	output:{
