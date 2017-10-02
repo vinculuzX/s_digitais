@@ -1,16 +1,19 @@
 import React from 'react'
+import headerstyle from './HeaderStylesheet.scss'
 
 export default class FlexHeader extends React.Component{
   render(){
     return (
-      <header Classname={header}>
-        <div Classname={header__brand}>
-          <img src=""/>
+    <section id="header">
+      <header className={headerstyle.nav}>
+        <div className={headerstyle.header__brand}>
+          <img src="http://via.placeholder.com/198x51" />
         </div>
-        <div Classname={header__title}>
-          <h4>Equipe de soluções digitais</h4>
-        </div>  
+        <div className="header__title">
+          Equipe de Soluções Digitais
+        </div>
       </header>
+    </section>
     )
   }
 }
