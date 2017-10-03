@@ -11,14 +11,14 @@
   }
   .sidebar__input input[type=text]{
     width:95%;
-    height:55px;
+    max-height:55px;
     border:1px solid #E5E5E5;
     padding-top:15px;
     padding-bottom: 15px;
     padding-left:55px;
     background-color: #A5AAB6;
     background-image: url('../../assets/img/search__button.png');
-    background-position: 13px 13px; 
+    background-position: 13px 13px;
     background-repeat: no-repeat;
     color:#E5E5E5;
     font:16px/22px 'Open Sans', sans-serif
@@ -42,7 +42,7 @@
     color:#4D4E53;
     font-weight:bold;
     letter-spacing:1px;
-  
+
   }
   .sidebar__check{
     margin-top:25px;
@@ -53,7 +53,7 @@
     letter-spacing:1px;
   }
   .sidebar__check .squarebox{
-    width: 20px;	
+    width: 20px;
     margin: 20px auto;
     position: relative;
   }

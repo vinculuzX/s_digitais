@@ -27,9 +27,9 @@ export default class SidebarLayout extends React.Component{
 
                                 <div className="squarebox">
                                     <input type="checkbox" value="curitiba" id="squarebox" name="check" />
-                                    <label for="squarebox"></label>
-                                </div>  Curitiba                        
-                    
+                                    <label htmlFor="squarebox"></label>
+                                </div>  Curitiba
+
                         </div>
                     </div>
                 </div>
