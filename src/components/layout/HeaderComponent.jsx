@@ -7,7 +7,7 @@ export default class HeaderLayout extends React.Component{
     <section id="header">
       <header className="nav">
         <div className="header__brand">
-          <img src="http://via.placeholder.com/198x51" />
+          <img src="../../assets/img/brand__image.png" />
         </div>
         <div className="header__title">
           Equipe de Soluções Digitais

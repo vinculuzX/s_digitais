@@ -1,14 +1,15 @@
 import React from 'react'
 import HeaderLayout from './layout/HeaderComponent.jsx'
 import SidebarLayout from './layout/SidebarComponent.jsx'
+import ContentLayout from './layout/ContentComponent.jsx'
 import layoutstyle from './LayoutStylesheet.scss'
-export class ContentLayout extends React.Component{
+export class WrapLayout extends React.Component{
     render(){
         return(
           <section className="wrap">
             <div className="container">
               <SidebarLayout/>  
-              <div>Content</div>    
+              <ContentLayout/>  
             </div>
           </section>
         )
@@ -19,7 +20,7 @@ export default class LayoutComponent extends React.Component {
         return(
             <div>
                 <HeaderLayout/>
-                <ContentLayout/>
+                <WrapLayout/>
             </div>
         )
     }
