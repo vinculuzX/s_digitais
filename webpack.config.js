@@ -7,6 +7,11 @@ module.exports = {
 		filename:'[name].bundle.js',
 		path:path.resolve(__dirname,'build')
 	},
+	devServer: {
+		contentBase: path.join(__dirname, "build"),
+		compress: true,
+		port: 3000
+	},
 	module:{
 		loaders: [
 			{
@@ -21,6 +26,10 @@ module.exports = {
 				exclude: /node_modules/ ,
 				options: {presets: ['env', 'react']}
 
+			},
+			{
+				test: /\.(png|svg|jpg|gif)$/,
+				use:['file-loader']
 			},
 			{
 				test: /\.scss$/,
