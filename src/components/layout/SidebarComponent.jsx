@@ -1,8 +1,9 @@
 import React from 'react'
+import sidebarstyle from './SidebarStylesheet.scss'
 
 export class SidebarLayout extends React.Component{
     render(){
-            return(
+            return(''
                 <div class="sidebar__content">
                     <div class="sibebar__search">
                         <div class="sidebar__input">

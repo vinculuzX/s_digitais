@@ -7,20 +7,19 @@
         height: 70px;
         width: 100%;
       }
-      
+
       .header__brand {
         width: 250px;
         padding-left: 25px;
         padding-top: 10px;
         padding-bottom: 10px;
       }
-      
+
       .header__title {
         float: right;
-        width: 190px;
+        max-width: 260px;
         color: #4D4E53;
         font: 16px/22px OpenSans;
-        margin-top: -45px;
+        margin-top: -50px;
       }
   }
-  

@@ -5,8 +5,8 @@ export default class FlexHeader extends React.Component{
   render(){
     return (
     <section id="header">
-      <header className={headerstyle.nav}>
-        <div className={headerstyle.header__brand}>
+      <header className="nav">
+        <div className="header__brand">
           <img src="http://via.placeholder.com/198x51" />
         </div>
         <div className="header__title">
@@ -17,5 +17,3 @@ export default class FlexHeader extends React.Component{
     )
   }
 }
-
-
