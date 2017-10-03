@@ -1,7 +1,7 @@
 import React from 'react'
 import headerstyle from './HeaderStylesheet.scss'
 
-export default class FlexHeader extends React.Component{
+export default class HeaderLayout extends React.Component{
   render(){
     return (
     <section id="header">

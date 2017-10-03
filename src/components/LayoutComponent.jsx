@@ -5,9 +5,10 @@ import layoutstyle from './LayoutStylesheet.scss'
 export class ContentLayout extends React.Component{
     render(){
         return(
-          <section class="wrap">
-            <div class="container">
-              <SidebarLayout/>
+          <section className="wrap">
+            <div className="container">
+              <SidebarLayout/>  
+              <div>Content</div>    
             </div>
           </section>
         )
@@ -18,6 +19,7 @@ export default class LayoutComponent extends React.Component {
         return(
             <div>
                 <HeaderLayout/>
+                <ContentLayout/>
             </div>
         )
     }

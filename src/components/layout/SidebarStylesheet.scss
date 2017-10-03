@@ -1,31 +1,84 @@
 /* sidebar */
 .sidebar {
-    background-color: #D2D4DA;
+    background-color: #A5AAB6;
   }
   .sidebar__content{
     padding-left:25px
   }
   .sidebar__input{
-    width:220px;
-    height:55px;
-    border:2px solid #E5E5E5;
-    padding:15px 16px;
     margin-top:18px;
     margin-right:20px;
+  }
+  .sidebar__input input[type=text]{
+    width:95%;
+    height:55px;
+    border:1px solid #E5E5E5;
+    padding-top:15px;
+    padding-bottom: 15px;
+    padding-left:55px;
+    background-color: #A5AAB6;
+    background-image: url('../../assets/img/search__button.png');
+    background-position: 13px 13px; 
+    background-repeat: no-repeat;
+    color:#E5E5E5;
+    font:16px/22px 'Open Sans', sans-serif
   }
   .sidebar__filter{
     margin-top:30px
   }
   .sidebar__select{
-    background-color:#F4F4F6;
-    width:220px;
-    height:35px;
     margin-right:20px;
+    margin-top:15px;
+  }
+ .sidebar__select select{
+    background-color:#F4F4F6;
+    width:95%;
+    height:35px;
+    border-radius:2px;
+
+  }
+  .sidebar__select--font{
+    font: 14px/19px 'Open Sans', sans-serif;
+    color:#4D4E53;
+    font-weight:bold;
+    letter-spacing:1px;
+  
   }
   .sidebar__check{
     margin-top:25px;
   }
   .sidebar__title{
     color:#ffffff;
-    font:14px/19px
+    font:14px/19px 'Open Sans', sans-serif;
+    letter-spacing:1px;
   }
+  .sidebar__check .squarebox{
+    width: 20px;	
+    margin: 20px auto;
+    position: relative;
+  }
+  .sidebar__check .squarebox label{
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    border-radius: 4px;
+    background: #D2D4DA;
+ }
+ .sidebar__check .squarebox label:after{
+  opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 4px;
+	left: 4px;
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+ }
+ input[type=checkbox] {
+	visibility: hidden;
+}

@@ -1,4 +1,8 @@
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body{
+  margin:0;
+  padding:0;
+}
 .wrap {
   background-color:#E5E5E5;
 }
@@ -7,3 +11,4 @@
     grid-template-columns: 30% 70%;
     min-height:600px;
 }
+

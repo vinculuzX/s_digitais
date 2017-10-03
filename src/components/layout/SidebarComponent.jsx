@@ -1,28 +1,38 @@
 import React from 'react'
 import sidebarstyle from './SidebarStylesheet.scss'
 
-export class SidebarLayout extends React.Component{
+export default class SidebarLayout extends React.Component{
     render(){
-            return(''
-                <div class="sidebar__content">
-                    <div class="sibebar__search">
-                        <div class="sidebar__input">
+            return(
+                <div className="sidebar">
+                <div className="sidebar__content">
+                    <div className="sibebar__search">
+                        <div className="sidebar__input">
                             <input type="text" />
                         </div>
                     </div>
-                    <div class="sidebar__filter">
-                        <div class="sidebar__select">
+                    <div className="sidebar__filter">
+                        <div className="sidebar__select">
                             <select>
-                                <option value="volvo">Volvo</option>
-                                <option value="saab">Saab</option>
-                                <option value="mercedes">Mercedes</option>
-                                <option value="audi">Audi</option>
+                                <option className="sidebar__select--font">Filtre por Cargo</option>
                             </select>
                         </div>
-                        <div class="sidebar__check">
-                            <h3>Filtra por <b>Cidade</b></h3>
+                        <div className="sidebar__select">
+                            <select>
+                                <option className="sidebar__select--font">Filtre por Projeto</option>
+                            </select>
+                        </div>
+                        <div className="sidebar__check">
+                            <h3 className="sidebar__title">Filtrar por <b>Cidade</b></h3>
+
+                                <div class="squarebox">
+                                    <input type="checkbox" value="curitiba" id="squarebox" name="check" />
+                                    <label for="squarebox"></label>
+                                </div>  Curitiba                        
+                    
                         </div>
                     </div>
+                </div>
                 </div>
             )
     }
