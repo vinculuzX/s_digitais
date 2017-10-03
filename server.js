@@ -1,7 +1,12 @@
-var path =  require('path')
-var express = require('express')
+/* https://github.com/christianalfoni/webpack-express-boilerplate/blob/master/server.js */
+const path =  require('path')
+const express = require('express')
+const webpack = require('webpack')
+const webpackMiddleware = require('webpack-dev-middleware')
+const webpackHotMiddleware = require('webpack-hot-middleware')
+const config  = require('./webpack.config.js')
 
-var DIST_DIR = path.join(__dirname,"build"),
+const DIST_DIR = path.join(__dirname,"build"),
 	PORT = 3000,
 	app = express()
 
