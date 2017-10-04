@@ -1,6 +1,8 @@
 /* sidebar */
 .sidebar {
     background-color: #A5AAB6;
+    width: 287px;
+    min-height:1328px;
   }
   .sidebar__content{
     padding-left:25px
@@ -21,8 +23,12 @@
     background-position: 13px 13px;
     background-repeat: no-repeat;
     color:#E5E5E5;
-    font:16px/22px 'Open Sans', sans-serif
+    font:16px/22px 'Open Sans', sans-serif;
+    &:focus{
+      border-color: #E5E5E5;
+    }
   }
+
   .sidebar__filter{
     margin-top:30px
   }
@@ -52,33 +58,95 @@
     font:14px/19px 'Open Sans', sans-serif;
     letter-spacing:1px;
   }
-  .sidebar__check .squarebox{
-    width: 20px;
-    margin: 20px auto;
-    position: relative;
+  .sidebar__check input[type=checkbox]:not(old){
+    width     : 20px;
+    margin    : 0;
+    padding   : 0;
+    font-size : 1em;
+    opacity   : 0;
   }
-  .sidebar__check .squarebox label{
-    cursor: pointer;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 0;
-    border-radius: 4px;
-    background: #D2D4DA;
- }
- .sidebar__check .squarebox label:after{
-  opacity: 0;
-	content: '';
-	position: absolute;
-	width: 9px;
-	height: 5px;
-	background: transparent;
-	top: 4px;
-	left: 4px;
-	border: 3px solid #333;
-	border-top: none;
-	border-right: none;
- }
- input[type=checkbox] {
-	visibility: hidden;
-}
+  .sidebar__check input[type=checkbox]:not(old) + label{
+    display      : inline-block;
+  margin-left  : -2em;
+  line-height: 25px;
+    font-weight: 600;
+  }
+  .sidebar__check input[type=checkbox]:not(old) + label > span{
+    display          : inline-block;
+ width            : 0.875em;
+ height           : 0.875em;
+ margin           : 0.25em 0.5em 0.25em 0.25em;
+ border           : 0.0625em solid rgb(192,192,192);
+ border-radius    : 0.25em;
+ background       : rgb(224,224,224);
+ background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+ background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+ background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+ background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+ background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224));
+ vertical-align   : bottom;
+  }
+  .sidebar__check input[type=checkbox]:not(old):checked + label > span{
+    background-image :    -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+background-image :     -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+background-image :      -o-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  }
+  .sidebar__check input[type=checkbox]:not(old):checked + label > span:before{
+    content     : '✓';
+display     : block;
+width       : 1em;
+color       : rgb(153,204,102);
+font-size   : 0.875em;
+line-height : 1em;
+text-align  : center;
+text-shadow : 0 0 0.0714em rgb(115,153,77);
+font-weight : bold;
+  }
+  // .sidebar__check input[type=checkbox]{
+  //   visibility: hidden;
+  // }
+  // .sidebar__check label{
+  //     font:16px/33px 'Open Sans', sans-serif;
+  //   color: #4D4E53;
+  // }
+  // .sidebar__check input[type=checkbox] + label span{
+  //   width: 20px;
+  //   height: 20px;
+  //   display: inline-block;
+  //   cursor:pointer;
+  //   background: #D2D4DA;
+  //   border-radius: 4px;
+  //   vertical-align:middle;
+  // }
+//   .sidebar__check .squarebox{
+//     width: 20px;
+//     margin: 20px auto;
+//     position: relative;
+//   }
+//   .sidebar__check .squarebox label{
+//     cursor: pointer;
+//     position: absolute;
+//     width: 20px;
+//     height: 20px;
+//     top: 0;
+//     border-radius: 4px;
+//     background: #D2D4DA;
+//  }
+//  .sidebar__check .squarebox label:after{
+//   opacity: 0;
+// 	content: '';
+// 	position: absolute;
+// 	width: 9px;
+// 	height: 5px;
+// 	background: transparent;
+// 	top: 4px;
+// 	left: 4px;
+// 	border: 3px solid #333;
+// 	border-top: none;
+// 	border-right: none;
+//  }
+//  input[type=checkbox] {
+// 	visibility: hidden;
+// }

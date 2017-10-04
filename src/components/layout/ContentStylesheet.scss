@@ -1,14 +1,17 @@
 .content{
     margin-top:68px;
     margin-left:78px;
-    margin-right:78px
+    margin-right:78px;
+    width:910px;
   }
   .content__box{
     background-color:#ffffff;
     margin-top:10px;
     display:grid;
     grid-template-columns: 1fr 3fr 1fr 1fr;
-    
+    height: 100px;
+    border-radius: 2px;
+    cursor: pointer;
   }
   .content__avatar{
     padding-top:15px;
@@ -22,41 +25,41 @@
     object-fit:cover;
     }
     .content__profile{
-      padding-top:21px;
-      padding-bottom:21px
+      height:100px;
     }
     .profile__name{
-      font:22px/30px OpenSans;
+      font:22px/20px 'Open Sans', sans-serif;
       color:#4D4E53
     }
     .profile__info{
-      font:16px/22px OpenSans;
+      font:16px/2px 'Open Sans', sans-serif;
       color:#4D4E53;
-      margin-top:9px;
     }
     .content__project{
-      padding-top:35px;
-      padding-bottom:35px;
+      padding:20px 0px;
+      margin-left: 192px;
     }
     .project__name{
-      font:14px/19px OpenSans;
+      font:14px/19px 'Open Sans', sans-serif;
       color:#4D4E53;
       background-color:#EEEEEE;
       border-radius:20px;
       padding:9px;
       text-align:center;
       font-weight:800;
+      width:141px;
     }
     .action__plus{
-      font:36px/24px OpenSans;
+      font:36px/24px 'Open Sans', sans-serif;
       padding-top:40px;
       padding-bottom:40px;
       padding-right:40px;
       margin-left:40px;
     }
+    /* content contact */
     .content__info{
       height:450px;
-  
+
     }
     .info{
        border-radius:1px;
@@ -65,19 +68,32 @@
       background-color:#EEEEEE;
       height:80px;
       padding-left:35px;
-      padding-top:28px;
-      padding-bottom:24px;
-      font:16px/22px OpenSans
+      font:16px/22px 'Open Sans', sans-serif;
+      display:grid;
+      grid-template-columns: 1fr 2fr 1fr 1fr;
+      color: #4D4E53;
+      font-weight: bolder;
     }
-    .info__contact--margin{
-     margin-left:10px 
+    .info__contact--align{
+      padding:22px 0px;
+      text-align: center
     }
+    .info__contact--align > img{
+      position: relative;
+      top:8px;
+    }
+
     .info__details{
       background-color:#FFFFFF;
       height:360px;
+      padding-top:36px;
     }
     .details{
-      padding-top:36px;
       padding-left:39px;
+      padding-top:10px;
     }
-    
+    .details__title{
+      font-style: italic;
+      font: 16px/22px 'Open Sans',sans-serif;
+      color:#CC092F
+    }
