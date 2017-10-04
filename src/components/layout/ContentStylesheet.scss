@@ -55,10 +55,20 @@
       padding-bottom:40px;
       padding-right:40px;
       margin-left:40px;
+      display:block 
+    }
+    .action__minus{
+      font:50px/24px 'Open Sans', sans-serif;
+      padding-top:36px;
+      padding-bottom:40px;
+      padding-right:40px;
+      margin-left:40px;
+      display:none 
     }
     /* content contact */
     .content__info{
       height:450px;
+      display:none 
 
     }
     .info{

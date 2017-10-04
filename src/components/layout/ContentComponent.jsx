@@ -1,12 +1,25 @@
 import React from 'react'
 import contentstyle from './ContentStylesheet.scss'
+// image mock data
 import avatar1 from '../../assets/img/avatar1.png'
 import cel from '../../assets/img/icon_cel.png'
 import slack from '../../assets/img/icon_slack.png'
 import skype from '../../assets/img/icon_skype.png'
 import msg from '../../assets/img/icon_msg.png'
-export default class ContentLayout extends React.Component {
+// add variable dollar to jquery
+var $  = require('jquery')
 
+export default class ContentLayout extends React.Component {
+    openInfo(){
+        $(".content__info").slideDown()
+        $(".action__minus").show()
+        $(".action__plus").hide()
+    }
+    closeInfo(){
+        $(".content__info").slideUp()
+        $(".action__minus").hide()
+        $(".action__plus").show()
+    }
     render() {
         return (
             <div className="content">
@@ -21,7 +34,8 @@ export default class ContentLayout extends React.Component {
                     <div className="content__project">
                         <p className="project__name">Projeto PIS </p>
                     </div >
-                    <div className="action__plus">+</div>
+                    <div className="action__plus" onClick={this.openInfo.bind(this)}>+</div>
+                    <div className="action__minus" onClick={this.closeInfo.bind(this)}>-</div>
                 </div>
                 <div className="content__info">
                     <div className="info">

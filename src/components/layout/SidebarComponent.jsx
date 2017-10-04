@@ -25,8 +25,16 @@ export default class SidebarLayout extends React.Component{
                         <div className="sidebar__check">
                             <h3 className="sidebar__title">Filtrar por <b>Cidade</b></h3>
                             <div className="checkbox">
-                              <input id="option" type="checkbox" name="field" value="option"/>
-                              <label htmlFor="option"><span><span></span></span>Curitiba</label>
+                              <input id="ctb" type="checkbox" name="field" value="ctb"/>
+                              <label htmlFor="ctb"><span><span></span></span>Curitiba</label>
+                            </div>
+                            <div className="checkbox">
+                              <input id="sp" type="checkbox" name="field" value="sp"/>
+                              <label htmlFor="sp"><span><span></span></span>São Paulo</label>
+                            </div>
+                            <div className="checkbox">
+                              <input id="rj" type="checkbox" name="field" value="rj"/>
+                              <label htmlFor="rj"><span><span></span></span>Rio de Janeiro</label>
                             </div>
                         </div>
                     </div>
