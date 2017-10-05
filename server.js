@@ -2,12 +2,10 @@
 const path =  require('path')
 const express = require('express')
 const webpack = require('webpack')
-const webpackMiddleware = require('webpack-dev-middleware')
-const webpackHotMiddleware = require('webpack-hot-middleware')
 const config  = require('./webpack.config.js')
 
 const DIST_DIR = path.join(__dirname,"build"),
-	PORT = 3000,
+	PORT = 8080,
 	app = express()
 
 // serving the files on the build folder
