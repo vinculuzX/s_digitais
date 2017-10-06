@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && npm run dev",
-    "dev": "node server.js",
+    "start": "node server.js",
+    "postinstall": "webpack -p",
     "devServer": "webpack-dev-server"
   },
   "author": "",
