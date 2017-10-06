@@ -12,12 +12,16 @@ module.exports = {
 		compress: true,
 		port: 3000
 	},
+	resolve: {
+		extensions:["",".js",".jsx",".json"]
+	},
 	module:{
 		loaders: [
 			{
 				test: /\.js$/,
 				loader: 'babel-loader',
-				exclude: /node_modules/
+				exclude: /node_modules/,
+				options: {presets: ['env', 'react']}
 			},
 			{
 
