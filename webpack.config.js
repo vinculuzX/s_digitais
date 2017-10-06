@@ -13,8 +13,8 @@ module.exports = {
 		port: 3000
 	},
 	resolve: {
-		extensions:["",".js",".jsx",".json"]
-	},
+		extensions: ['.jsx', '.js']
+	  },
 	module:{
 		loaders: [
 			{
