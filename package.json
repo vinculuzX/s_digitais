@@ -7,8 +7,8 @@
     "node": "6.6.0"
   },
   "scripts": {
-    "build:development": "webpack --config ./webpack.config.js --env=development --progress --profile --colors",
-    "build:production": "webpack --config ./webpack-production.config.js --env=production --progress --profile --colors",
+    "build:development": "webpack --config webpack.config.js --env=development --progress --profile --colors",
+    "build:production": "webpack --config webpack-production.config.js --env=production --progress --profile --colors",
     "postinstall": "npm run build:production",
     "start": "node server"
   },
@@ -36,6 +36,7 @@
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "webpack": "^3.6.0",
     "express": "^4.16.0"
   }
 }
