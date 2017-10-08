@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "6.6.0"
+  },
   "scripts": {
-    "start": "node server.js",
-    "postinstall": "webpack -p",
-    "devServer": "webpack-dev-server"
+    "build:development": "webpack --config ./config/webpack.config.js --env=development --progress --profile --colors",
+    "build:production": "webpack --config ./config/webpack-production.config.js --env=production --progress --profile --colors",
+    "postinstall": "npm run build:production",
+    "start": "node server"
   },
   "author": "",
   "license": "ISC",
@@ -26,7 +30,6 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack-dev-middleware": "^1.12.0",
-    "webpack-dev-server": "^2.8.2",
     "webpack-hot-middleware": "^2.19.1"
   },
   "dependencies": {
