@@ -1,20 +1,42 @@
-var path = require('path')
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const APP_SRC = path.join(__dirname,'src')
 // const APP_BUILD = path.join(__dirname,'build')
+const htmlplugin = [
+	new HtmlWebpackPlugin({
+		template: path.join(__dirname,'./build/index.html'),
+		inject:'body',
+		title:'Solucoes Digitais',
+		filename:'index.html'
+	})
+]
+const plugins = [
+  new webpack.HotModuleReplacementPlugin(),
+  new webpack.DefinePlugin({
+    'process.env.NODE_ENV': JSON.stringify('development'),
+  }),
+];
 module.exports = {
-	entry:'./src/index.jsx',
+	devtool: 'eval-source-map',
+	entry:[
+		'webpack-hot-middleware/client?reload=true',
+		path.resolve(__dirname,'src/index.jsx')
+	],
 	output:{
 		filename:'[name].bundle.js',
-		path:path.resolve(__dirname,'build')
+		path:path.resolve(__dirname,'build'),
+		publicPath: '/',
 	},
-	devServer: {
-		contentBase: path.join(__dirname, "build"),
-		compress: true,
-		port: 3000
-	},
+	// devServer: {
+	// 	contentBase: path.join(__dirname, "build"),
+	// 	compress: true,
+	// 	port: 3000
+	// },
 	resolve: {
 		extensions:[".js",".jsx"]
 	},
+	plugins: plugins.concat(htmlplugin),
 	module:{
 		loaders: [
 			{
