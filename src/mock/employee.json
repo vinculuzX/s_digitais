@@ -1,19 +1,51 @@
-{
-	"contributor": "",
-	"city": "",
-	"project": "",
+[{
+	"id":"1",
+	"contributor": "José Gabriel Pereira Telhado",
+	"city": "Rio de Janeiro",
+	"project": "PIS",
 	"avatar": "",
-	"careerfield": "",
+	"careerfield": "UX/UI Designer",
+	"contact":[{
+		"tel":"21 99353-1889",
+		"email":"jose.telhado@mjv.com.br",
+		"slack":"#GabrielTelhado",
+		"skype":"jgtelhado"
+	}],
 	"skills": [{
 		"graduation": [{
-			"degree": "",
-			"master": ""
+			"degree": "Desenho Industrial (Gama Filho)",
+			"master": "Marketing e Design Digital (ESPM)"
 		}],
-		"experience": "",
+		"experience": "10 anos de experiência em design.Desde de 2010 atuando na área digital, em diversos projetos: sites institucionais, responsivos, apps mobiles, ATM, e-commerce. Quase sempre participando de todo o fluxo de UI/UX: fluxograma, benchmark, paperframes, protótipos navegáveis, aplicação de card sorting, pesquisa quantitativa, interface.",
 		"knowleges": [{
-			"tools": "",
+			"tools": "Axure, Invision, Figma, Sketch, Photoshop, Illustrator, Hotjar, CrazyEgg, Xmind",
 			"course": "",
 			"certification": ""
 		}]
 	}]
-}
+},{
+	"id":"2",
+	"contributor": "José Gabriel Pereira Telhado",
+	"city": "Rio de Janeiro",
+	"project": "PIS",
+	"avatar": "",
+	"careerfield": "UX/UI Designer",
+	"contact":[{
+		"tel":"21 99353-1889",
+		"email":"jose.telhado@mjv.com.br",
+		"slack":"#GabrielTelhado",
+		"skype":"jgtelhado"
+	}],
+	"skills": [{
+		"graduation": [{
+			"degree": "Desenho Industrial (Gama Filho)",
+			"master": "Marketing e Design Digital (ESPM)"
+		}],
+		"experience": "10 anos de experiência em design.Desde de 2010 atuando na área digital, em diversos projetos: sites institucionais, responsivos, apps mobiles, ATM, e-commerce. Quase sempre participando de todo o fluxo de UI/UX: fluxograma, benchmark, paperframes, protótipos navegáveis, aplicação de card sorting, pesquisa quantitativa, interface.",
+		"knowleges": [{
+			"tools": "Axure, Invision, Figma, Sketch, Photoshop, Illustrator, Hotjar, CrazyEgg, Xmind",
+			"course": "",
+			"certification": ""
+		}]
+	}]
+}]
