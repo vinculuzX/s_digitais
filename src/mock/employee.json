@@ -1,3 +1,19 @@
 {
-    
+	"contributor": "",
+	"city": "",
+	"project": "",
+	"avatar": "",
+	"careerfield": "",
+	"skills": [{
+		"graduation": [{
+			"degree": "",
+			"master": ""
+		}],
+		"experience": "",
+		"knowleges": [{
+			"tools": "",
+			"course": "",
+			"certification": ""
+		}]
+	}]
 }
