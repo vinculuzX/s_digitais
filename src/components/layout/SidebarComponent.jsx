@@ -1,12 +1,12 @@
 import React from 'react'
 import sidebarstyle from './SidebarStylesheet.scss'
-import $ from 'jquery'
 export default class SidebarLayout extends React.Component{
-    filterByRegion(){
-        
+    constructor(props){
+        super(props)
+        this.state = {selectOccupationValue:''}
     }
-    componentDidMount(){
-        this.filterByRegion()
+    filterByOccupation(event){
+      this.setState({selectOccupationValue:event.target.value})
     }
     render(){
             return(
@@ -19,7 +19,7 @@ export default class SidebarLayout extends React.Component{
                     </div>
                     <div className="sidebar__filter">
                         <div className="sidebar__select">
-                            <select>
+                            <select id="filter__occupation" onChange={this.filterByOccupation.bind(this)}>
                                 <option className="sidebar__select--font" value="">Filtre por Cargo</option>
                                 <option className="sidebar__select--font" value="ux/ui">UI/UX Designer</option>
                                 <option className="sidebar__select--font" value="frontend">FrontEnd</option>
@@ -27,7 +27,7 @@ export default class SidebarLayout extends React.Component{
                             </select>
                         </div>
                         <div className="sidebar__select">
-                            <select>
+                            <select className="filter__project">
                                 <option className="sidebar__select--font">Filtre por Projeto</option>
                                 <option className="sidebar__select--font" value="pis">PIS</option>
                                 <option className="sidebar__select--font" value="renove">RENOVE</option>
