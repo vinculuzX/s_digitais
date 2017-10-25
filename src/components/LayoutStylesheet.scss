@@ -12,3 +12,101 @@ body{
     grid-template-columns: 25% 55%;
     min-height:600px;
 }
+
+/* sidebar */
+.sidebar {
+    background-color: #A5AAB6;
+    width: 287px;
+    min-height:1328px;
+  }
+  .sidebar__content{
+    padding-left:25px
+  }
+  .sidebar__input{
+    margin-top:18px;
+    margin-right:20px;
+  }
+  .sidebar__input input[type=text]{
+    // width:95%;
+    max-height:55px;
+    border:1px solid #E5E5E5;
+    padding-top:15px;
+    padding-bottom: 15px;
+    padding-left:55px;
+    background-color: #A5AAB6;
+    background-image: url('../assets/img/search__button.png');
+    background-position: 13px 13px;
+    background-repeat: no-repeat;
+    color:#E5E5E5;
+    font:16px/22px 'Open Sans', sans-serif;
+    &:focus{
+      border-color: #E5E5E5;
+    }
+  }
+
+  .sidebar__filter{
+    margin-top:30px
+  }
+  .sidebar__select{
+    margin-right:20px;
+    margin-top:15px;
+  }
+ .sidebar__select select{
+    background-color:#F4F4F6;
+    width:95%;
+    height:35px;
+    border-radius:2px;
+
+  }
+  .sidebar__select--font{
+    font: 14px/19px 'Open Sans', sans-serif;
+    color:#4D4E53;
+    font-weight:bold;
+    letter-spacing:1px;
+
+  }
+  .sidebar__check{
+    margin-top:25px;
+  }
+  .sidebar__title{
+    color:#ffffff;
+    font:14px/19px 'Open Sans', sans-serif;
+    letter-spacing:1px;
+  }
+  .checkbox{
+    padding-left: 40px;
+    padding-top: 13px;
+  }
+  .sidebar__check input[type=checkbox]:not(old){
+    width:20px;
+    margin:0;
+    padding:0;
+    opacity:0;
+    font-size:20px;
+    cursor:pointer;
+  }
+  .sidebar__check input[type=checkbox]:not(old) + label{
+    display:inline-block;
+    margin-left:-2em;
+    line-height:25px;
+    font-weight:500;
+  }
+  .sidebar__check input[type=checkbox]:not(old) + label > span{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    border-radius:4px;
+    margin:0.25em 0.5em 0.25em 0.25em;
+    background:#D2D4DA;
+    vertical-align:bottom;
+  }
+  .sidebar__check input[type=checkbox]:not(old):checked + label > span:before{
+    content     : '✓';
+    display: block;
+    width: 1em;
+    color: #4D4E53;
+    font-size: 20px;
+    line-height : 1em;
+    text-align  : center;
+    font-weight : bold;
+  }

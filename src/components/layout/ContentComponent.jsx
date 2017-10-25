@@ -1,4 +1,5 @@
 import React from 'react'
+// stylesheet
 import contentstyle from './ContentStylesheet.scss'
 // image mock data
 import avatar1 from '../../assets/img/avatar1.png'
@@ -6,21 +7,17 @@ import cel from '../../assets/img/icon_cel.png'
 import slack from '../../assets/img/icon_slack.png'
 import skype from '../../assets/img/icon_skype.png'
 import msg from '../../assets/img/icon_msg.png'
-
-// employee mock data
-import EmployeeStore from '../../stores/EmployeeStore.jsx'
 // add variable dollar to jquery
 var $  = require('jquery')
 
 export default class ContentLayout extends React.Component {
-    constructor(){
-        super()
-        this.state = {
-            employees: EmployeeStore.getAll()
-        }
+    constructor(props){
+      super(props)
+      this.state = {
+        employeeList:this.props.employeeList
+      }
     }
     openInfo(id){
-        
         $("#" + id + " .content__info").slideDown()
         $("#" + id + " .action__minus").show()
         $("#" + id + " .action__plus").hide()
@@ -31,8 +28,7 @@ export default class ContentLayout extends React.Component {
         $("#" + id + " .action__plus").show()
     }
     render() {
-        const employeeList = this.state.employees
-        const employeeListComponent = employeeList.map(list => {
+        const employeeListComponent = this.state.employeeList.map(list => {
             return (
                 <div key={list.id} id={list.id}>
                     <div className="content__box">
@@ -47,7 +43,7 @@ export default class ContentLayout extends React.Component {
                             <p className="project__name">Projeto {list.project}</p>
                         </div>
                         <div className="action__plus" onClick={this.openInfo.bind(this,list.id)}>+</div>
-                        <div className="action__minus" onClick={this.closeInfo.bind(this,list.id)}>-</div>    
+                        <div className="action__minus" onClick={this.closeInfo.bind(this,list.id)}>-</div>
                     </div>
                     <div className="content__info">
                         <div className="info">
@@ -79,12 +75,12 @@ export default class ContentLayout extends React.Component {
                                 </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </div>
             )
         })
         return (
-            <div className="content">{employeeListComponent}</div>
+            <div className="content">{this.props.inputTextValue}<br/>{employeeListComponent}</div>
         )
     }
 }

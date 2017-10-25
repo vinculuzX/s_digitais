@@ -3,10 +3,10 @@ import sidebarstyle from './SidebarStylesheet.scss'
 export default class SidebarLayout extends React.Component{
     constructor(props){
         super(props)
-        this.state = {selectOccupationValue:''}
     }
-    filterByOccupation(event){
-      this.setState({selectOccupationValue:event.target.value})
+    filterUpdate(){
+      const val = this.textValue.value
+      console.log(val)
     }
     render(){
             return(
@@ -14,12 +14,15 @@ export default class SidebarLayout extends React.Component{
                 <div className="sidebar__content">
                     <div className="sibebar__search">
                         <div className="sidebar__input">
-                            <input type="text" />
+                            <input type="text"
+                              ref={(value)=>{this.textValue = value}}
+                              onChange={this.filterUpdate.bind(this)}
+                            />
                         </div>
                     </div>
                     <div className="sidebar__filter">
                         <div className="sidebar__select">
-                            <select id="filter__occupation" onChange={this.filterByOccupation.bind(this)}>
+                            <select id="filter__occupation">
                                 <option className="sidebar__select--font" value="">Filtre por Cargo</option>
                                 <option className="sidebar__select--font" value="ux/ui">UI/UX Designer</option>
                                 <option className="sidebar__select--font" value="frontend">FrontEnd</option>
