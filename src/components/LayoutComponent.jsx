@@ -11,7 +11,9 @@ export class WrapLayout extends React.Component{
       super(props)
       this.state = {
         employee:EmployeeStore.getAll(),
-        filterText:''
+        filterText:'',
+        filterOcSelect:'',
+        filter
       }
     }
     filterUpdate(value){
@@ -19,18 +21,25 @@ export class WrapLayout extends React.Component{
         filterText:value
       })
     }
+    filterbyOcuppation(value){
+      this.setState({
+        filterOcSelect:value
+      })
+    }
     render(){
-        console.log(this.state.filterText)
         return(
           <section className="wrap">
             <div className="container">
               <SidebarLayout
               filterText={this.state.filterText}
+              filterOcSelect={this.state.filterOcSelect}
               filterUpdate={this.filterUpdate.bind(this)}
+              filterbyOcuppation={this.filterbyOcuppation.bind(this)}
               />
               <ContentLayout
               employeeList={this.state.employee}
               filterText={this.state.filterText}
+              filterOcSelect={this.state.filterOcSelect}
               />
             </div>
           </section>

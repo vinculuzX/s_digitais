@@ -8,6 +8,14 @@ export default class SidebarLayout extends React.Component{
       const val = this.textValue.value
       this.props.filterUpdate(val)
     }
+    filterbyOcuppation(){
+        const val = this.selectOcValue.value
+        this.props.filterbyOcuppation(val)
+    }
+    filterbyProject(){
+        const val = this.selectPjValue.value
+        this.props.filterbyProject(val)
+    }
     render(){
             return(
                 <div className="sidebar">
@@ -22,15 +30,21 @@ export default class SidebarLayout extends React.Component{
                     </div>
                     <div className="sidebar__filter">
                         <div className="sidebar__select">
-                            <select id="filter__occupation">
+                            <select id="filter__occupation"
+                                ref={(value)=>{this.selectOcValue = value}}
+                                onChange={this.filterbyOcuppation.bind(this)}
+                            >
                                 <option className="sidebar__select--font" value="">Filtre por Cargo</option>
-                                <option className="sidebar__select--font" value="ux/ui">UI/UX Designer</option>
-                                <option className="sidebar__select--font" value="frontend">FrontEnd</option>
-                                <option className="sidebar__select--font" value="backend">BackEnd</option>
+                                <option className="sidebar__select--font" value="UX/UI Designer">UX/UI Designer</option>
+                                <option className="sidebar__select--font" value="Frontend">Frontend</option>
+                                <option className="sidebar__select--font" value="Backend">Backend</option>
                             </select>
                         </div>
                         <div className="sidebar__select">
-                            <select className="filter__project">
+                            <select className="filter__project"
+                                ref={(value)=>{this.selectPjValue = value}}
+                                onChange={this.filterbyProject.bind(this)}
+                            >
                                 <option className="sidebar__select--font">Filtre por Projeto</option>
                                 <option className="sidebar__select--font" value="pis">PIS</option>
                                 <option className="sidebar__select--font" value="renove">RENOVE</option>

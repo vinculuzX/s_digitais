@@ -28,7 +28,19 @@ export default class ContentLayout extends React.Component {
         $("#" + id + " .action__plus").show()
     }
     render() {
-        const employeeListComponent = this.state.employeeList.map(list => {
+        const filterText = this.props.filterText
+        const filterOcSelect = this.props.filterOcSelect
+        const employeeListComponent = this.state.employeeList
+        .filter(list=>{
+            return list.contributor.toLowerCase().indexOf(filterText.toLowerCase()) >= 0 
+        })
+        .filter(list=>{
+            return list.careerfield.toLowerCase().indexOf(filterOcSelect.toLowerCase()) >= 0
+        })
+        .filter(list=>{
+            return list.careerfield.toLowerCase().indexOf(filterOcSelect.toLowerCase()) >= 0
+        })
+        .map(list => {
             return (
                 <div key={list.id} id={list.id}>
                     <div className="content__box">
@@ -80,7 +92,7 @@ export default class ContentLayout extends React.Component {
             )
         })
         return (
-            <div className="content">{this.props.filterText}<br/>{employeeListComponent}</div>
+            <div className="content">{employeeListComponent}</div>
         )
     }
 }
