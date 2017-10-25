@@ -6,7 +6,7 @@ export default class SidebarLayout extends React.Component{
     }
     filterUpdate(){
       const val = this.textValue.value
-      console.log(val)
+      this.props.filterUpdate(val)
     }
     render(){
             return(

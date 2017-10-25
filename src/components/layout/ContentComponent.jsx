@@ -80,7 +80,7 @@ export default class ContentLayout extends React.Component {
             )
         })
         return (
-            <div className="content">{this.props.inputTextValue}<br/>{employeeListComponent}</div>
+            <div className="content">{this.props.filterText}<br/>{employeeListComponent}</div>
         )
     }
 }

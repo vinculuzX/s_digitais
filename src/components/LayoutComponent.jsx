@@ -7,19 +7,31 @@ import layoutstyle from './LayoutStylesheet.scss'
 import EmployeeStore from '../stores/EmployeeStore.jsx'
 
 export class WrapLayout extends React.Component{
-    constructor(){
-      super()
+    constructor(props){
+      super(props)
       this.state = {
         employee:EmployeeStore.getAll(),
         filterText:''
       }
     }
+    filterUpdate(value){
+      this.setState({
+        filterText:value
+      })
+    }
     render(){
+        console.log(this.state.filterText)
         return(
           <section className="wrap">
             <div className="container">
-              <SidebarLayout filterText={this.state.filterText}/>
-              <ContentLayout employeeList={this.state.employee}/>
+              <SidebarLayout
+              filterText={this.state.filterText}
+              filterUpdate={this.filterUpdate.bind(this)}
+              />
+              <ContentLayout
+              employeeList={this.state.employee}
+              filterText={this.state.filterText}
+              />
             </div>
           </section>
         )
