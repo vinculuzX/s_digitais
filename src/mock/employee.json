@@ -3,7 +3,7 @@
 	"contributor": "José Gabriel Pereira Telhado",
 	"city": "Rio de Janeiro",
 	"project": "PIS",
-	"avatar": "",
+	"avatar": "https://i.pinimg.com/originals/59/ba/6b/59ba6b524743bf179221d0c57d382314.jpg",
 	"careerfield": "UX/UI Designer",
 	"contact":[{
 		"tel":"21 99353-1889",
@@ -25,10 +25,10 @@
 	}]
 },{
 	"id":"2",
-	"contributor": "José Gabriel Pereira Telhado",
+	"contributor": "Renata Fernanda Inha da Silva",
 	"city": "Rio de Janeiro",
 	"project": "PIS",
-	"avatar": "",
+	"avatar": "http://1.bp.blogspot.com/-bZBSYkjtmm8/UFOJ6A1qzTI/AAAAAAAAIG4/z2hd5B7JFiQ/s1600/KILZA+2.jpg",
 	"careerfield": "UX/UI Designer",
 	"contact":[{
 		"tel":"21 99353-1889",
@@ -53,8 +53,108 @@
 	"contributor": "Leozinho do Salvare",
 	"city": "Rio de Janeiro",
 	"project": "SALVARE",
-	"avatar": "",
+	"avatar": "http://deskbg.com/s3/wpp/29/29395/dragon-ball-z-majin-buu-desktop-background.png",
+	"careerfield": "Backend",
+	"contact":[{
+		"tel":"21 99353-1889",
+		"email":"jose.telhado@mjv.com.br",
+		"slack":"#GabrielTelhado",
+		"skype":"jgtelhado"
+	}],
+	"skills": [{
+		"graduation": [{
+			"degree": "Desenho Industrial (Gama Filho)",
+			"master": "Marketing e Design Digital (ESPM)"
+		}],
+		"experience": "10 anos de experiência em design.Desde de 2010 atuando na área digital, em diversos projetos: sites institucionais, responsivos, apps mobiles, ATM, e-commerce. Quase sempre participando de todo o fluxo de UI/UX: fluxograma, benchmark, paperframes, protótipos navegáveis, aplicação de card sorting, pesquisa quantitativa, interface.",
+		"knowleges": [{
+			"tools": "Axure, Invision, Figma, Sketch, Photoshop, Illustrator, Hotjar, CrazyEgg, Xmind",
+			"course": "",
+			"certification": ""
+		}]
+	}]
+},{
+	"id":"4",
+	"contributor": "Doug Lazaro Ramos",
+	"city": "Curitiba",
+	"project": "SALVARE",
+	"avatar": "http://www.correio24horas.com.br/fileadmin/acervo/uploads/RTEmagicC_lazaro_ramoss_01.jpg.jpg",
+	"careerfield": "Backend",
+	"contact":[{
+		"tel":"21 99353-1889",
+		"email":"jose.telhado@mjv.com.br",
+		"slack":"#GabrielTelhado",
+		"skype":"jgtelhado"
+	}],
+	"skills": [{
+		"graduation": [{
+			"degree": "Desenho Industrial (Gama Filho)",
+			"master": "Marketing e Design Digital (ESPM)"
+		}],
+		"experience": "10 anos de experiência em design.Desde de 2010 atuando na área digital, em diversos projetos: sites institucionais, responsivos, apps mobiles, ATM, e-commerce. Quase sempre participando de todo o fluxo de UI/UX: fluxograma, benchmark, paperframes, protótipos navegáveis, aplicação de card sorting, pesquisa quantitativa, interface.",
+		"knowleges": [{
+			"tools": "Axure, Invision, Figma, Sketch, Photoshop, Illustrator, Hotjar, CrazyEgg, Xmind",
+			"course": "",
+			"certification": ""
+		}]
+	}]
+},{
+	"id":"5",
+	"contributor": "Fechadão Jhones",
+	"city": "São Paulo",
+	"project": "RENOVE",
+	"avatar": "https://vignette.wikia.nocookie.net/pirates/images/a/ac/JackSparrowProfile.jpg/revision/latest?cb=20121228135424",
 	"careerfield": "Frontend",
+	"contact":[{
+		"tel":"21 99353-1889",
+		"email":"jose.telhado@mjv.com.br",
+		"slack":"#GabrielTelhado",
+		"skype":"jgtelhado"
+	}],
+	"skills": [{
+		"graduation": [{
+			"degree": "Desenho Industrial (Gama Filho)",
+			"master": "Marketing e Design Digital (ESPM)"
+		}],
+		"experience": "10 anos de experiência em design.Desde de 2010 atuando na área digital, em diversos projetos: sites institucionais, responsivos, apps mobiles, ATM, e-commerce. Quase sempre participando de todo o fluxo de UI/UX: fluxograma, benchmark, paperframes, protótipos navegáveis, aplicação de card sorting, pesquisa quantitativa, interface.",
+		"knowleges": [{
+			"tools": "Axure, Invision, Figma, Sketch, Photoshop, Illustrator, Hotjar, CrazyEgg, Xmind",
+			"course": "",
+			"certification": ""
+		}]
+	}]
+},{
+	"id":"6",
+	"contributor": "Marcelo Wikipidia",
+	"city": "Rio de Janeiro",
+	"project": "SAF",
+	"avatar": "http://www.redeto.com.br/images/noticia/20131024200426_charles_henrique_.jpg",
+	"careerfield": "Backend",
+	"contact":[{
+		"tel":"21 99353-1889",
+		"email":"jose.telhado@mjv.com.br",
+		"slack":"#GabrielTelhado",
+		"skype":"jgtelhado"
+	}],
+	"skills": [{
+		"graduation": [{
+			"degree": "Desenho Industrial (Gama Filho)",
+			"master": "Marketing e Design Digital (ESPM)"
+		}],
+		"experience": "10 anos de experiência em design.Desde de 2010 atuando na área digital, em diversos projetos: sites institucionais, responsivos, apps mobiles, ATM, e-commerce. Quase sempre participando de todo o fluxo de UI/UX: fluxograma, benchmark, paperframes, protótipos navegáveis, aplicação de card sorting, pesquisa quantitativa, interface.",
+		"knowleges": [{
+			"tools": "Axure, Invision, Figma, Sketch, Photoshop, Illustrator, Hotjar, CrazyEgg, Xmind",
+			"course": "",
+			"certification": ""
+		}]
+	}]
+},{
+	"id":"7",
+	"contributor": "Wand Chiliquenta",
+	"city": "Curitiba",
+	"project": "RENOVE",
+	"avatar": "http://1.bp.blogspot.com/-2ORFBe_YLkI/U_h6aHX21jI/AAAAAAAAEKQ/CpPPVHShWgg/s1600/davi%2Bluis%2Bchiliquenta%2B230814.jpg",
+	"careerfield": "Backend",
 	"contact":[{
 		"tel":"21 99353-1889",
 		"email":"jose.telhado@mjv.com.br",

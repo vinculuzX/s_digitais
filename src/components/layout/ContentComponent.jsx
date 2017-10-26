@@ -30,22 +30,23 @@ export default class ContentLayout extends React.Component {
     render() {
         const filterText = this.props.filterText
         const filterOcSelect = this.props.filterOcSelect
+        const filterbyProject = this.props.filterbyProject
         const employeeListComponent = this.state.employeeList
         .filter(list=>{
-            return list.contributor.toLowerCase().indexOf(filterText.toLowerCase()) >= 0 
+            return list.contributor.toLowerCase().indexOf(filterText.toLowerCase()) >= 0
         })
         .filter(list=>{
             return list.careerfield.toLowerCase().indexOf(filterOcSelect.toLowerCase()) >= 0
         })
         .filter(list=>{
-            return list.careerfield.toLowerCase().indexOf(filterOcSelect.toLowerCase()) >= 0
+            return list.project.toLowerCase().indexOf(filterbyProject.toLowerCase()) >= 0
         })
         .map(list => {
             return (
                 <div key={list.id} id={list.id}>
                     <div className="content__box">
                         <div className="content__avatar">
-                            <img src={avatar1} />
+                            <img src={list.avatar} />
                         </div>
                         <div className="content__profile">
                             <p className="profile__name">{list.contributor}</p>

@@ -13,7 +13,7 @@ export class WrapLayout extends React.Component{
         employee:EmployeeStore.getAll(),
         filterText:'',
         filterOcSelect:'',
-        filter
+        filterbyProject:''
       }
     }
     filterUpdate(value){
@@ -26,6 +26,11 @@ export class WrapLayout extends React.Component{
         filterOcSelect:value
       })
     }
+    filterbyProject(value){
+      this.setState({
+        filterbyProject:value
+      })
+    }
     render(){
         return(
           <section className="wrap">
@@ -33,13 +38,16 @@ export class WrapLayout extends React.Component{
               <SidebarLayout
               filterText={this.state.filterText}
               filterOcSelect={this.state.filterOcSelect}
+              filterbyProject={this.state.filterbyProject}
               filterUpdate={this.filterUpdate.bind(this)}
               filterbyOcuppation={this.filterbyOcuppation.bind(this)}
+              filterbyProject={this.filterbyProject.bind(this)}
               />
               <ContentLayout
               employeeList={this.state.employee}
               filterText={this.state.filterText}
               filterOcSelect={this.state.filterOcSelect}
+              filterbyProject={this.state.filterbyProject}
               />
             </div>
           </section>
