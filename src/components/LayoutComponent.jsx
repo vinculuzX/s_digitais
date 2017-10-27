@@ -13,7 +13,8 @@ export class WrapLayout extends React.Component{
         employee:EmployeeStore.getAll(),
         filterText:'',
         filterOcSelect:'',
-        filterbyProject:''
+        filterPjSelect:'',
+        filterRgCheckbox:[]
       }
     }
     filterUpdate(value){
@@ -28,7 +29,12 @@ export class WrapLayout extends React.Component{
     }
     filterbyProject(value){
       this.setState({
-        filterbyProject:value
+        filterPjSelect:value
+      })
+    }
+    filterbyRegion(value){
+      this.setState( {
+        filterRgCheckbox: value
       })
     }
     render(){
@@ -38,16 +44,19 @@ export class WrapLayout extends React.Component{
               <SidebarLayout
               filterText={this.state.filterText}
               filterOcSelect={this.state.filterOcSelect}
-              filterbyProject={this.state.filterbyProject}
+              filterPjSelect={this.state.filterPjSelect}
+              filterRgCheckbox={this.state.filterRgCheckbox}
               filterUpdate={this.filterUpdate.bind(this)}
               filterbyOcuppation={this.filterbyOcuppation.bind(this)}
               filterbyProject={this.filterbyProject.bind(this)}
+              filterbyRegion={this.filterbyRegion.bind(this)}
               />
               <ContentLayout
               employeeList={this.state.employee}
               filterText={this.state.filterText}
               filterOcSelect={this.state.filterOcSelect}
-              filterbyProject={this.state.filterbyProject}
+              filterPjSelect={this.state.filterPjSelect}
+              filterRgCheckbox={this.state.filterRgCheckbox}
               />
             </div>
           </section>

@@ -17,6 +17,7 @@ export default class ContentLayout extends React.Component {
         employeeList:this.props.employeeList
       }
     }
+    //Jquery slide Toogle
     openInfo(id){
         $("#" + id + " .content__info").slideDown()
         $("#" + id + " .action__minus").show()
@@ -27,10 +28,13 @@ export default class ContentLayout extends React.Component {
         $("#" + id + " .action__minus").hide()
         $("#" + id + " .action__plus").show()
     }
+    // render aplication with filter
     render() {
         const filterText = this.props.filterText
         const filterOcSelect = this.props.filterOcSelect
-        const filterbyProject = this.props.filterbyProject
+        const filterPjSelect = this.props.filterPjSelect 
+        const filterRgCheckbox = this.props.filterRgCheckbox
+        const filterCounter = filterRgCheckbox.length
         const employeeListComponent = this.state.employeeList
         .filter(list=>{
             return list.contributor.toLowerCase().indexOf(filterText.toLowerCase()) >= 0
@@ -39,7 +43,12 @@ export default class ContentLayout extends React.Component {
             return list.careerfield.toLowerCase().indexOf(filterOcSelect.toLowerCase()) >= 0
         })
         .filter(list=>{
-            return list.project.toLowerCase().indexOf(filterbyProject.toLowerCase()) >= 0
+            return list.project.toLowerCase().indexOf(filterPjSelect.toLowerCase()) >= 0
+        })
+        .filter((list)=>{
+            for(var i=0;i<=filterCounter;i++){
+                return list.city.indexOf(filterRgCheckbox) >= 0
+            }    
         })
         .map(list => {
             return (

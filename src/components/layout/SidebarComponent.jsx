@@ -17,7 +17,20 @@ export default class SidebarLayout extends React.Component{
         this.props.filterbyProject(val)
     }
     filterbyRegion(){
-
+        var filterArray = []
+        if(this.checkbox1Value.checked){
+            const val1 = this.checkbox1Value.value
+            filterArray.push(val1)
+        }
+        if(this.checkbox2Value.checked){
+            const val2 = this.checkbox2Value.value
+            filterArray.push(val2)
+        }
+        if(this.checkbox3Value.checked){
+            const val3 = this.checkbox3Value.value
+            filterArray.push(val3)
+        }
+        this.props.filterbyRegion(filterArray)
     }
     render(){
             return(
@@ -59,18 +72,21 @@ export default class SidebarLayout extends React.Component{
                             <h3 className="sidebar__title">Filtrar por <b>Cidade</b></h3>
                             <div className="checkbox">
                               <input id="ctb" type="checkbox" name="ctb" value="Curitiba"
+                                ref={(value)=>{this.checkbox1Value = value}}
                                 onChange={this.filterbyRegion.bind(this)}
                               />
                               <label htmlFor="ctb"><span><span></span></span>Curitiba</label>
                             </div>
                             <div className="checkbox">
                               <input id="sp" type="checkbox" name="sp" value="São Paulo"
+                                ref={(value)=>{this.checkbox2Value = value}}
                                 onChange={this.filterbyRegion.bind(this)}
                               />
                               <label htmlFor="sp"><span><span></span></span>São Paulo</label>
                             </div>
                             <div className="checkbox">
                               <input id="rj" type="checkbox" name="rj" value="Rio de Janeiro"
+                                ref={(value)=>{this.checkbox3Value=value}}
                                 onChange={this.filterbyRegion.bind(this)}
                               />
                               <label htmlFor="rj"><span><span></span></span>Rio de Janeiro</label>
