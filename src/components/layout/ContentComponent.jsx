@@ -32,7 +32,7 @@ export default class ContentLayout extends React.Component {
     render() {
         const filterText = this.props.filterText
         const filterOcSelect = this.props.filterOcSelect
-        const filterPjSelect = this.props.filterPjSelect 
+        const filterPjSelect = this.props.filterPjSelect
         const filterRgCheckbox = this.props.filterRgCheckbox
         const filterCounter = filterRgCheckbox.length
         const employeeListComponent = this.state.employeeList
@@ -46,9 +46,10 @@ export default class ContentLayout extends React.Component {
             return list.project.toLowerCase().indexOf(filterPjSelect.toLowerCase()) >= 0
         })
         .filter((list)=>{
-            for(var i=0;i<=filterCounter;i++){
-                return list.city.indexOf(filterRgCheckbox) >= 0
-            }    
+            for(var i=0;i<filterCounter;i++){
+                console.log(filterRgCheckbox[i-2],filterRgCheckbox[i])
+                return list.city.indexOf(filterRgCheckbox[i]) >= 0 || list.city.indexOf(filterRgCheckbox[i+1]) >= 0 || list.city.indexOf(filterRgCheckbox[i+2]) >= 0
+            }
         })
         .map(list => {
             return (

@@ -18,17 +18,22 @@ export default class SidebarLayout extends React.Component{
     }
     filterbyRegion(){
         var filterArray = []
-        if(this.checkbox1Value.checked){
-            const val1 = this.checkbox1Value.value
-            filterArray.push(val1)
-        }
-        if(this.checkbox2Value.checked){
-            const val2 = this.checkbox2Value.value
-            filterArray.push(val2)
-        }
-        if(this.checkbox3Value.checked){
-            const val3 = this.checkbox3Value.value
-            filterArray.push(val3)
+        if(this.checkbox1Value.checked || this.checkbox2Value.checked || this.checkbox3Value.checked){
+          if(this.checkbox1Value.checked){
+              const val1 = this.checkbox1Value.value
+              filterArray.push(val1)
+          }
+          if(this.checkbox2Value.checked){
+              const val2 = this.checkbox2Value.value
+              filterArray.push(val2)
+          }
+          if(this.checkbox3Value.checked){
+              const val3 = this.checkbox3Value.value
+              filterArray.push(val3)
+          }
+        }else{
+          const standard = this.checkbox4Value.value
+          filterArray.push(standard)
         }
         this.props.filterbyRegion(filterArray)
     }
@@ -91,6 +96,9 @@ export default class SidebarLayout extends React.Component{
                               />
                               <label htmlFor="rj"><span><span></span></span>Rio de Janeiro</label>
                             </div>
+                            <input type="hidden"
+                              ref={(value)=>{this.checkbox4Value=value}}
+                            value=""/>
                         </div>
                     </div>
                 </div>

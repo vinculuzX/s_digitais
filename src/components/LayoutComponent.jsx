@@ -14,7 +14,7 @@ export class WrapLayout extends React.Component{
         filterText:'',
         filterOcSelect:'',
         filterPjSelect:'',
-        filterRgCheckbox:[]
+        filterRgCheckbox:[""]
       }
     }
     filterUpdate(value){
